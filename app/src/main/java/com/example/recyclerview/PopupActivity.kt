@@ -2,11 +2,7 @@ package com.example.recyclerview
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
-import kotlinx.android.synthetic.main.activity_add.*
 import kotlinx.android.synthetic.main.activity_popup.*
-import kotlinx.android.synthetic.main.activity_popup.editText5
-import kotlinx.android.synthetic.main.item_hoge_data_cell.*
 
 class PopupActivity : AppCompatActivity() {
 
@@ -22,7 +18,7 @@ class PopupActivity : AppCompatActivity() {
 
         imageView.setImageResource(hogeImageResorce)
 
-        textView.text = hogeName
+        textVieww.text = hogeName
         editText5.text = description
 
     }

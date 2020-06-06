@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.item_hoge_data_cell.*
 
 class MainActivity : AppCompatActivity() {
 
-  //  val preview = Intent(this,PopupActivity::class.java)
+
 
     val hogeData : List<hogeData> = listOf(
         hogeData(R.drawable.no_image,"ケニア","酸味がつよい"),
@@ -36,27 +36,22 @@ class MainActivity : AppCompatActivity() {
 
         adapter.addall(hogeData)
 
-      //  imageView.setOnClickListener {
-        //   popup(hogeData[7],preview)
-       // }
+
+
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.main, menu)
         return super.onCreateOptionsMenu(menu)
     }
 
+//メニューのどれがクリックされても呼ばれるメソッド
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when(item?.itemId) {
-            R.id.add -> Intent(this,AddActivity::class.java)
-
+            R.id.addButton ->{val Intent = Intent(this,AddActivity::class.java)
+                        startActivity(Intent) }
         }
         return super.onOptionsItemSelected(item)
     }
 
-    fun popup(hogeData: hogeData,preview:Intent) {
-        preview.putExtra("image",hogeData.hogeImageResorce)
-        preview.putExtra("Name",hogeData.hogeName)
-        preview.putExtra("description",hogeData.description)
-        startActivity(preview)
-    }
+
 }

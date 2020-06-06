@@ -17,7 +17,7 @@
         android:theme="?attr/actionBarTheme" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="280dp"
         app:srcCompat="@drawable/no_image" />
@@ -75,51 +75,39 @@
     android:text="ケニア"
     android:textSize="36sp" />
 
-    <EditText
+    <TextView
         android:id="@+id/editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
         android:text="香り" />
 
-    <EditText
+    <TextView
         android:id="@+id/editText2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
         android:text="酸味" />
 
-    <EditText
+    <TextView
         android:id="@+id/editText3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
         android:text="コク" />
 
-    <EditText
+    <TextView
         android:id="@+id/editText4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
         android:text="苦味" />
 
-    <EditText
+    <TextView
         android:id="@+id/editText6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
         android:text="産地" />
 
     <TextView
         android:id="@+id/editText5"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:ems="10"
-        android:inputType="textPersonName"
         android:text="メモ" />
 </LinearLayout>
