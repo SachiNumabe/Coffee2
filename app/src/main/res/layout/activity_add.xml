@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PopupActivity">
+    tools:context=".AddActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,56 +25,23 @@
         android:id="@+id/imageViewAdd"
         android:layout_width="wrap_content"
         android:layout_height="280dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:layout_margin="16dp"
         app:srcCompat="@drawable/no_image" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#d1c6b0"
-        android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/beanImage1"
-            android:layout_width="0dp"
-            android:layout_height="24dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/bean_nomal" />
-
-        <ImageView
-            android:id="@+id/beanImage2"
-            android:layout_width="0dp"
-            android:layout_height="24dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/bean_gray" />
-
-        <ImageView
-            android:id="@+id/beanImage3"
-            android:layout_width="0dp"
-            android:layout_height="24dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/bean_nomal" />
-
-        <ImageView
-            android:id="@+id/beanImage4"
-            android:layout_width="0dp"
-            android:layout_height="24dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/bean_nomal" />
-
-        <ImageView
-            android:id="@+id/beanImage5"
-            android:layout_width="0dp"
-            android:layout_height="24dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/bean_nomal" />
-
-        <Space
-            android:layout_width="0dp"
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="@style/customRatingBar"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="10" />
-    </LinearLayout>
+            android:numStars="5"
+            android:layout_gravity="center"
+            android:rating="5"
+            android:stepSize="1" />
 
-    <EditText
+        <EditText
         android:id="@+id/beanName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -109,6 +76,7 @@
 
         <EditText
             android:id="@+id/editText4"
+            style="@style/customRatingBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -126,7 +94,7 @@
         <EditText
             android:id="@+id/editText5"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="348dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:text="メモ" />
