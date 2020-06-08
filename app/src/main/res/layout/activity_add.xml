@@ -94,9 +94,15 @@
         <EditText
             android:id="@+id/editText5"
             android:layout_width="match_parent"
-            android:layout_height="348dp"
+            android:layout_height="203dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:text="メモ" />
+
+        <ImageButton
+            android:id="@+id/saveAddButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@android:drawable/editbox_dropdown_light_frame" />
     </LinearLayout>
 </ScrollView>

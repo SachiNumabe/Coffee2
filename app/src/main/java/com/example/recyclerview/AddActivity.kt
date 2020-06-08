@@ -6,6 +6,8 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Bundle
+import android.widget.RatingBar
+import android.widget.RatingBar.OnRatingBarChangeListener
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_add.*
 import java.io.FileDescriptor
@@ -27,6 +29,11 @@ class AddActivity : AppCompatActivity() {
             intent.type = "image/*"
             startActivityForResult(intent, RESULT_PICK_IMAGEFILE)
 
+        }
+
+        saveAddButton.setOnClickListener {
+            val Intent = Intent(this,MainActivity::class.java)
+            startActivity(Intent)
         }
     }
 
@@ -55,5 +62,13 @@ class AddActivity : AppCompatActivity() {
         val image = BitmapFactory.decodeFileDescriptor(fileDescriptor)
         parcelFileDescriptor.close()
         return image
+
     }
+
+//    val ratingBar = findViewById<RatingBar>(R.id.ratingBar)
+//
+//    // 変更イベントの実装
+//    ratingBar.setOnRatingBarChangeListener{ ratingBar, rating, fromUser ->
+//
+//    }
 }
