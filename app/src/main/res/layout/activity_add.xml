@@ -1,25 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddActivity">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#d1c6b0"
-        android:orientation="vertical">
-
+    tools:context=".AddActivity"
+    android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_add"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#9d6634"
+        android:background="@color/colorPrimaryDark"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
 
     <ImageView
         android:id="@+id/imageViewAdd"
@@ -31,78 +38,387 @@
         app:srcCompat="@drawable/no_image" />
 
 
+        <TextView
+            android:id="@+id/rateTextViewAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:textColor="@color/colorAccent"
+            android:layout_marginStart="16dp"
+            android:text="総合評価" />
+
         <RatingBar
-            android:id="@+id/ratingBar"
+            android:id="@+id/ratingBarAdd"
             style="@style/customRatingBar"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
             android:numStars="5"
             android:layout_gravity="center"
             android:rating="5"
             android:stepSize="1" />
 
-        <EditText
-        android:id="@+id/beanName"
+            <EditText
+                android:id="@+id/beanNameEditTextAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:textSize="24dp"
+                android:inputType="textPersonName"
+                android:textColor="@color/colorAccent"
+                android:hint="コーヒーの名前" />
+
+        <TextView
+            android:id="@+id/flavorTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textSize="12dp"
+            android:textColor="@color/colorAccent"
+            android:text="Flavor　香り" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/roastedButtonAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorAccent"
+                    android:text="ROASTED" />
+
+                <Button
+                    android:id="@+id/spicesButtonAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorGlay"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorAccent"
+                    android:text="SPICES" />
+
+                <Button
+                    android:id="@+id/nuttyButtonAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorGlay"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorAccent"
+                    android:text="NUTTY/COCOA" />
+
+                <Button
+                    android:id="@+id/sweetButtonAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorGlay"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorAccent"
+                    android:text="SWEET" />
+
+                <Button
+                    android:id="@+id/floralButtonAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorGlay"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorAccent"
+                    android:text="FLORAL" />
+
+                <Button
+                    android:id="@+id/fruityButtonAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorGlay"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorAccent"
+                    android:text="FRUITY" />
+
+                <Button
+                    android:id="@+id/sourButtonAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorGlay"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorAccent"
+                    android:text="SOUR/FERMENTED" />
+
+                <Button
+                    android:id="@+id/greenButtonAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorGlay"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorAccent"
+                    android:text="GREEN/VEGETATIVE" />
+
+                <Button
+                    android:id="@+id/otherButtonAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorGlay"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorAccent"
+                    android:text="OTHER" />
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/acidityTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/colorAccent"
+            android:text="Acidity　酸味" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/AcidityHighButtonAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:text="High"
+                    android:textColor="@color/colorAccent" />
+
+                <Button
+                    android:id="@+id/AcidityMediumButtonAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorGlay"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorAccent"
+                    android:text="Medium" />
+
+                <Button
+                    android:id="@+id/AcidityLowButtonAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorGlay"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorAccent"
+                    android:text="Low" />
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/bodyTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/colorAccent"
+            android:text="Body コク" />
+
+        <HorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ケニア"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textSize="36sp" />
+        android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp">
 
-        <EditText
-            android:id="@+id/editText"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/bodyHighButtonAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:text="High"
+                android:textColor="@color/colorAccent" />
+
+            <Button
+                android:id="@+id/bodyMediumButtonAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorGlay"
+                android:layout_weight="1"
+                android:textColor="@color/colorAccent"
+                android:text="Medium" />
+
+            <Button
+                android:id="@+id/bodyLowButtonAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorGlay"
+                android:layout_weight="1"
+                android:textColor="@color/colorAccent"
+                android:text="Low" />
+
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/growingRegionTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="香り" />
+            android:textSize="12dp"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/colorAccent"
+            android:text="GrowingRegion 産地" />
 
-        <EditText
-            android:id="@+id/editText2"
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/LatinAmericaRegionButtonAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorAccent"
+                    android:text="LatinAmerica" />
+
+                <Button
+                    android:id="@+id/AsiaPacificRegionButtonAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorGlay"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorAccent"
+                    android:text="Asia/Pacific" />
+
+                <Button
+                    android:id="@+id/AfricaRegionButtonAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorGlay"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorAccent"
+                    android:text="Africa" />
+
+                <Button
+                    android:id="@+id/MultiRegionnButtonAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorGlay"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorAccent"
+                    android:text="Multi-region" />
+
+                <Button
+                    android:id="@+id/otherRegionButtonAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorGlay"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorAccent"
+                    android:text="OTHER" />
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/ProcessingTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="酸味" />
+            android:textSize="12dp"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/colorAccent"
+            android:text="Processing　加工法" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/WashedProcessingButtonAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:text="Washed"
+                    android:textColor="@color/colorAccent" />
+
+                <Button
+                    android:id="@+id/SemiWashedProcessingButtonAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorGlay"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorAccent"
+                    android:text="Semi-Washed" />
+
+                <Button
+                    android:id="@+id/NaturalProcessingButtonAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/colorGlay"
+                    android:text="Natural"
+                    android:textColor="@color/colorAccent" />
+
+                <Button
+                    android:id="@+id/otherProcessingButtonAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorGlay"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorAccent"
+                    android:text="other" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
 
         <EditText
-            android:id="@+id/editText3"
+            android:id="@+id/MemoEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/colorAccent"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="コク" />
+            android:inputType="textMultiLine"
+            android:hint="メモ" />
 
-        <EditText
-            android:id="@+id/editText4"
-            style="@style/customRatingBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="苦味" />
-
-        <EditText
-            android:id="@+id/editText6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="産地" />
-
-        <EditText
-            android:id="@+id/editText5"
-            android:layout_width="match_parent"
-            android:layout_height="203dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="メモ" />
-
-        <ImageButton
+        <Button
             android:id="@+id/saveAddButton"
             android:layout_width="match_parent"
+            android:backgroundTint="@color/colorPrimaryDark"
             android:layout_height="wrap_content"
-            app:srcCompat="@android:drawable/editbox_dropdown_light_frame" />
+            android:layout_margin="16dp"
+            android:textColor="@color/colorAccent"
+            android:text="SAVE"/>
     </LinearLayout>
-</ScrollView>
+    </ScrollView>
+</LinearLayout>

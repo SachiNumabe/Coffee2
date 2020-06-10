@@ -16,10 +16,10 @@ class PopupActivity : AppCompatActivity() {
 
         val description = intent.getStringExtra("description")
 
-        imageView.setImageResource(hogeImageResorce)
+        imageViewPopup.setImageResource(hogeImageResorce)
 
-        textVieww.text = hogeName
-        editText5.text = description
+        beanNameEditTextPopup.text = hogeName
+        MemoTextViewPopup.text = description
 
     }
 }
