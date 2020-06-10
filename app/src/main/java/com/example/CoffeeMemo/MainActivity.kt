@@ -1,6 +1,5 @@
-package com.example.recyclerview
+package com.example.CoffeeMemo
 
-import android.app.LauncherActivity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,12 +8,7 @@ import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
 import io.realm.Realm
 import io.realm.RealmConfiguration
-import io.realm.RealmObject
-import io.realm.Sort
-import io.realm.annotations.PrimaryKey
-import io.realm.annotations.Required
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.item_hoge_data_cell.*
 
 class MainActivity : AppCompatActivity() {
 

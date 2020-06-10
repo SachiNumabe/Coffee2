@@ -1,4 +1,4 @@
-package com.example.recyclerview
+package com.example.CoffeeMemo
 
 data class hogeData (
     val hogeImageResorce: Int,

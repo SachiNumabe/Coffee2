@@ -1,4 +1,4 @@
-package com.example.recyclerview
+package com.example.CoffeeMemo
 
 import org.junit.Test
 

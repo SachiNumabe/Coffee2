@@ -1,4 +1,4 @@
-package com.example.recyclerview
+package com.example.CoffeeMemo
 
 import android.app.Activity
 import android.content.Intent
@@ -8,7 +8,6 @@ import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModel
 import kotlinx.android.synthetic.main.activity_add.*
 import java.io.FileDescriptor
 import java.io.IOException
