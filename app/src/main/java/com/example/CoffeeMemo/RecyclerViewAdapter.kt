@@ -49,14 +49,7 @@ val items: MutableList<realmData> = mutableListOf()
     }
 
     fun popup(realmData: realmData,preview:Intent) {
-        preview.putExtra("image",realmData.RealmImageResorce)
-        preview.putExtra("Name",realmData.RealmName)
-        preview.putExtra("flavor",realmData.RealmFlavor)
-        preview.putExtra("acidity",realmData.RealmAcidity)
-        preview.putExtra("body",realmData.RealmBody)
-        preview.putExtra("region",realmData.RealmRegion)
-        preview.putExtra("processing",realmData.RealmProcessing)
-        preview.putExtra("memo",realmData.Realmmemo)
+        preview.putExtra("realmData",realmData)
         context.startActivity(preview)
     }
 

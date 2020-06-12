@@ -1,5 +1,7 @@
 package com.example.CoffeeMemo
 
+import java.io.Serializable
+
 
 data class hogeData (
     val hogeName: String,

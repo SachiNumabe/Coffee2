@@ -4,7 +4,6 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt' // なければこれも追加
 apply plugin: 'realm-android'
 
-
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
@@ -50,4 +49,5 @@ dependencies {
     implementation 'io.realm:android-adapters:3.1.0'
 
     implementation("io.coil-kt:coil:0.11.0")
+
 }

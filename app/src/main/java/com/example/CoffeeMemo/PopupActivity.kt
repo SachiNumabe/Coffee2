@@ -10,6 +10,7 @@ import io.realm.Realm
 import io.realm.RealmObject.deleteFromRealm
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_popup.*
+import java.io.Serializable
 
 class PopupActivity : AppCompatActivity() {
 
@@ -20,25 +21,18 @@ class PopupActivity : AppCompatActivity() {
         setContentView(R.layout.activity_popup)
         setSupportActionBar(toolbar_add)
 
-        val hogeImageResorce = intent.getStringExtra("image")
-        val hogeName = intent.getStringExtra("Name")
-        val flavor = intent.getStringExtra("flavor")
-        val acidity = intent.getStringExtra("acidity")
-        val body = intent.getStringExtra("body")
-        val region = intent.getStringExtra("region")
-        val processing = intent.getStringExtra("processing")
-        val memo = intent.getStringExtra("memo")
+        val hogeData: realmData = intent.getSerializableExtra("realmData") as realmData
 
-        imageViewPopup.load(hogeImageResorce){
+        imageViewPopup.load(hogeData.RealmImageResorce){
             error(R.drawable.no_image)
         }
-        beanNameEditTextPopup.text = hogeName
-        flavorTextViewEditPopup.text = flavor
-        acidityTextViewEditPopup.text = acidity
-        bodyTextViewEditPopup.text = body
-        regionTextViewEditPopup.text = region
-        processingTextViewEditPopup.text = processing
-        memoTextViewEditPopup.text = memo
+        beanNameEditTextPopup.text = hogeData.RealmName
+        flavorTextViewEditPopup.text = hogeData.RealmFlavor
+        acidityTextViewEditPopup.text = hogeData.RealmAcidity
+        bodyTextViewEditPopup.text = hogeData.RealmBody
+        regionTextViewEditPopup.text = hogeData.RealmRegion
+        processingTextViewEditPopup.text = hogeData.RealmProcessing
+        memoTextViewEditPopup.text = hogeData.Realmmemo
 
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -50,11 +44,17 @@ class PopupActivity : AppCompatActivity() {
         when(item?.itemId) {
             R.id.deleteButton ->{
                 realm.executeTransaction {
-                   // item.deleteFromRealm()
+                   hogeData.deleteFromRealm()
                 }
             }
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    //画面終了時にRealmを終了する
+    override fun onDestroy() {
+        super.onDestroy()
+        realm.close()
     }
 
 }

@@ -48,6 +48,10 @@ import kotlinx.android.synthetic.main.item_hoge_data_cell.*
          return realm.copyFromRealm(realm.where(realmData::class.java).findAll())
      }
 
-
+     //画面終了時にRealmを終了する
+     override fun onDestroy() {
+         super.onDestroy()
+         realm.close()
+     }
 
 }

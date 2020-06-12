@@ -1,8 +1,10 @@
 package com.example.CoffeeMemo
 
 import io.realm.RealmObject
+import java.io.Serializable
 
-open class realmData (
+
+data class realmData (
     var RealmName: String = "",
     var RealmFlavor: String = "",
     var RealmAcidity: String = "",
@@ -11,4 +13,4 @@ open class realmData (
     var RealmProcessing: String = "",
     var Realmmemo:String = "",
     var RealmImageResorce: String = ""
-): RealmObject()
+):Serializable,RealmObject()
