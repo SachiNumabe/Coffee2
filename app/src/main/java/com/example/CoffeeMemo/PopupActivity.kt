@@ -44,7 +44,7 @@ class PopupActivity : AppCompatActivity() {
         when(item?.itemId) {
             R.id.deleteButton ->{
                 realm.executeTransaction {
-                   hogeData.deleteFromRealm()
+                   //hogeData.deleteFromRealm()
                 }
             }
         }

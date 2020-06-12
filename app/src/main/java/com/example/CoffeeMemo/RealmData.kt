@@ -4,7 +4,7 @@ import io.realm.RealmObject
 import java.io.Serializable
 
 
-data class realmData (
+open class realmData (
     var RealmName: String = "",
     var RealmFlavor: String = "",
     var RealmAcidity: String = "",
