@@ -1,7 +1,13 @@
 package com.example.CoffeeMemo
 
+
 data class hogeData (
-    val hogeImageResorce: Int,
     val hogeName: String,
-    val description:String
+    val hogeFlavor: String,
+    val hogeAcidity: String,
+    val hogeBody: String,
+    val hogeRegion: String,
+    val hogeProcessing: String,
+    val memo:String,
+    val hogeImageResorce: String
 )

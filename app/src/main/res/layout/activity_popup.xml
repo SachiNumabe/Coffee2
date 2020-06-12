@@ -122,6 +122,15 @@
                 android:text="Flavor　香り" />
 
             <TextView
+                android:id="@+id/flavorTextViewEditPopup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:textSize="24dp"
+                android:textColor="@color/colorAccent"
+                android:text="なっつ" />
+
+            <TextView
                 android:id="@+id/acidityTextViewPopup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -129,6 +138,15 @@
                 android:layout_marginStart="16dp"
                 android:textColor="@color/colorAccent"
                 android:text="Acidity　酸味" />
+
+            <TextView
+                android:id="@+id/acidityTextViewEditPopup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:textSize="24dp"
+                android:textColor="@color/colorAccent"
+                android:text="なっつ" />
 
             <TextView
                 android:id="@+id/bodyTextViewPopup"
@@ -140,6 +158,15 @@
                 android:text="Body コク" />
 
             <TextView
+                android:id="@+id/bodyTextViewEditPopup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:textSize="24dp"
+                android:textColor="@color/colorAccent"
+                android:text="なっつ" />
+
+            <TextView
                 android:id="@+id/growingRegionTextViewPopup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -147,6 +174,15 @@
                 android:layout_marginStart="16dp"
                 android:textColor="@color/colorAccent"
                 android:text="GrowingRegion 産地" />
+
+            <TextView
+                android:id="@+id/regionTextViewEditPopup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:textSize="24dp"
+                android:textColor="@color/colorAccent"
+                android:text="なっつ" />
 
             <TextView
                 android:id="@+id/ProcessingTextViewPopup"
@@ -158,6 +194,15 @@
                 android:text="Processing　加工法" />
 
             <TextView
+                android:id="@+id/processingTextViewEditPopup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:textSize="24dp"
+                android:textColor="@color/colorAccent"
+                android:text="なっつ" />
+
+            <TextView
                 android:id="@+id/MemoTextViewPopup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -167,6 +212,15 @@
                 android:ems="10"
                 android:inputType="textMultiLine"
                 android:hint="メモ" />
+
+            <TextView
+                android:id="@+id/memoTextViewEditPopup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:textSize="24dp"
+                android:textColor="@color/colorAccent"
+                android:text="なっつ" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

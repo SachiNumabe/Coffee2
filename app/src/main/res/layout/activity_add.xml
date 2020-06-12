@@ -93,10 +93,11 @@
                     android:id="@+id/roastedButtonAdd"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/colorPrimaryDark"
                     android:layout_weight="1"
-                    android:textColor="@color/colorAccent"
-                    android:text="ROASTED" />
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:onClick="flavor"
+                    android:text="ROASTED"
+                    android:textColor="@color/colorAccent" />
 
                 <Button
                     android:id="@+id/spicesButtonAdd"
@@ -113,6 +114,7 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/colorGlay"
                     android:layout_weight="1"
+                    android:onClick="flavor"
                     android:textColor="@color/colorAccent"
                     android:text="NUTTY/COCOA" />
 
@@ -122,6 +124,7 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/colorGlay"
                     android:layout_weight="1"
+                    android:onClick="flavor"
                     android:textColor="@color/colorAccent"
                     android:text="SWEET" />
 
@@ -131,6 +134,7 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/colorGlay"
                     android:layout_weight="1"
+                    android:onClick="flavor"
                     android:textColor="@color/colorAccent"
                     android:text="FLORAL" />
 
@@ -140,6 +144,7 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/colorGlay"
                     android:layout_weight="1"
+                    android:onClick="flavor"
                     android:textColor="@color/colorAccent"
                     android:text="FRUITY" />
 
@@ -149,6 +154,7 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/colorGlay"
                     android:layout_weight="1"
+                    android:onClick="flavor"
                     android:textColor="@color/colorAccent"
                     android:text="SOUR/FERMENTED" />
 
@@ -158,6 +164,7 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/colorGlay"
                     android:layout_weight="1"
+                    android:onClick="flavor"
                     android:textColor="@color/colorAccent"
                     android:text="GREEN/VEGETATIVE" />
 
@@ -167,6 +174,7 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/colorGlay"
                     android:layout_weight="1"
+                    android:onClick="flavor"
                     android:textColor="@color/colorAccent"
                     android:text="OTHER" />
 
@@ -200,6 +208,7 @@
                     android:layout_weight="1"
                     android:backgroundTint="@color/colorPrimaryDark"
                     android:text="High"
+                    android:onClick="acidity"
                     android:textColor="@color/colorAccent" />
 
                 <Button
@@ -208,6 +217,7 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/colorGlay"
                     android:layout_weight="1"
+                    android:onClick="acidity"
                     android:textColor="@color/colorAccent"
                     android:text="Medium" />
 
@@ -217,6 +227,7 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/colorGlay"
                     android:layout_weight="1"
+                    android:onClick="acidity"
                     android:textColor="@color/colorAccent"
                     android:text="Low" />
 
@@ -248,6 +259,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:onClick="body"
                 android:backgroundTint="@color/colorPrimaryDark"
                 android:text="High"
                 android:textColor="@color/colorAccent" />
@@ -258,6 +270,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/colorGlay"
                 android:layout_weight="1"
+                android:onClick="body"
                 android:textColor="@color/colorAccent"
                 android:text="Medium" />
 
@@ -267,6 +280,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/colorGlay"
                 android:layout_weight="1"
+                android:onClick="body"
                 android:textColor="@color/colorAccent"
                 android:text="Low" />
 
@@ -299,6 +313,7 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/colorPrimaryDark"
                     android:layout_weight="1"
+                    android:onClick="region"
                     android:textColor="@color/colorAccent"
                     android:text="LatinAmerica" />
 
@@ -308,6 +323,7 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/colorGlay"
                     android:layout_weight="1"
+                    android:onClick="region"
                     android:textColor="@color/colorAccent"
                     android:text="Asia/Pacific" />
 
@@ -317,6 +333,7 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/colorGlay"
                     android:layout_weight="1"
+                    android:onClick="region"
                     android:textColor="@color/colorAccent"
                     android:text="Africa" />
 
@@ -326,6 +343,7 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/colorGlay"
                     android:layout_weight="1"
+                    android:onClick="region"
                     android:textColor="@color/colorAccent"
                     android:text="Multi-region" />
 
@@ -335,6 +353,7 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/colorGlay"
                     android:layout_weight="1"
+                    android:onClick="region"
                     android:textColor="@color/colorAccent"
                     android:text="OTHER" />
 
@@ -366,6 +385,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:onClick="processing"
                     android:backgroundTint="@color/colorPrimaryDark"
                     android:text="Washed"
                     android:textColor="@color/colorAccent" />
@@ -376,6 +396,7 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/colorGlay"
                     android:layout_weight="1"
+                    android:onClick="processing"
                     android:textColor="@color/colorAccent"
                     android:text="Semi-Washed" />
 
@@ -384,6 +405,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:onClick="processing"
                     android:backgroundTint="@color/colorGlay"
                     android:text="Natural"
                     android:textColor="@color/colorAccent" />
@@ -394,6 +416,7 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/colorGlay"
                     android:layout_weight="1"
+                    android:onClick="processing"
                     android:textColor="@color/colorAccent"
                     android:text="other" />
 
