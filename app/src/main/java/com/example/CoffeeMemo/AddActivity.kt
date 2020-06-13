@@ -47,11 +47,12 @@ class AddActivity : AppCompatActivity() {
         // 変更イベントの実装
         ratingBarAdd.setOnRatingBarChangeListener { ratingBar, rating, fromUser ->
 //            if(){
-////
-////            }
+//
+//            }
         }
 
         saveAddButton.setOnClickListener {
+            val imageId: Int = 0
             val realmName: String = beanNameEditTextAdd.text.toString()
             val realmFlavor: String = Flavor
             val realmAcidity: String = Acidity
@@ -61,7 +62,7 @@ class AddActivity : AppCompatActivity() {
             val realmmemo: String = MemoEditText.text.toString()
             val realmImage: String = stringUri
 
-            save(realmName,realmFlavor,realmAcidity,realmBody,realmRegion,realmProcessing,realmmemo,realmImage)
+            save(imageId,realmName,realmFlavor,realmAcidity,realmBody,realmRegion,realmProcessing,realmmemo,realmImage)
 
             val Intent = Intent(this,MainActivity::class.java)
             startActivity(Intent)
@@ -105,13 +106,14 @@ class AddActivity : AppCompatActivity() {
         realm.close()
     }
 
-    fun save(realmName: String,realmFlavor: String,realmAcidity: String,realmBody: String,realmRegion: String,realmProcessing: String,realmmemo: String,realmImage: String){
+    fun save(imageId: Int,realmName: String,realmFlavor: String,realmAcidity: String,realmBody: String,realmRegion: String,realmProcessing: String,realmmemo: String,realmImage: String){
 
         //データベースの 操作(書き込み)をする
         //realm.executeTransaction{}内だとitをrealmの変数として扱うようになる 高階関数
         realm.executeTransaction{
                 //保存するデータの新規作成
                 val newRealmData:realmData = it.createObject(realmData::class.java)
+                newRealmData.imageId = imageId
                 //newRealmData.id = UUID.randomUUID().toString()
                 newRealmData.RealmName = realmName
                 newRealmData.RealmFlavor = realmFlavor

@@ -43,7 +43,7 @@ class PopupActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when(item?.itemId) {
             R.id.deleteButton ->{
-                delete("id")
+                delete("0")
             }
         }
         return super.onOptionsItemSelected(item)

@@ -8,12 +8,13 @@ import java.util.*
 
 open class realmData (
     @PrimaryKey open var id: String = UUID.randomUUID().toString(),
-    open var RealmName: String = "",
-    open var RealmFlavor: String = "",
-    open var RealmAcidity: String = "",
-    open var RealmBody: String = "",
-    open var RealmRegion: String = "",
-    open var RealmProcessing: String = "",
-    open var Realmmemo:String = "",
-    open var RealmImageResorce: String = ""
+    open var imageId: Int = 0,
+    var RealmName: String = "",
+    var RealmFlavor: String = "",
+    var RealmAcidity: String = "",
+    var RealmBody: String = "",
+    var RealmRegion: String = "",
+    var RealmProcessing: String = "",
+    var Realmmemo:String = "",
+    var RealmImageResorce: String = ""
 ):Serializable,RealmObject()
