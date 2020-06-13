@@ -43,7 +43,9 @@ class PopupActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when(item?.itemId) {
             R.id.deleteButton ->{
-                delete("0")
+                delete(item.itemId.toString())
+                val Intent = Intent(this,MainActivity::class.java)
+                startActivity(Intent)
             }
         }
         return super.onOptionsItemSelected(item)

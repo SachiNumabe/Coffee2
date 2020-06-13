@@ -8,7 +8,6 @@ import java.util.*
 
 open class realmData (
     @PrimaryKey open var id: String = UUID.randomUUID().toString(),
-    open var imageId: Int = 0,
     var RealmName: String = "",
     var RealmFlavor: String = "",
     var RealmAcidity: String = "",
