@@ -43,9 +43,7 @@ class PopupActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when(item?.itemId) {
             R.id.deleteButton ->{
-                realm.executeTransaction {
-                   //hogeData.deleteFromRealm()
-                }
+                delete("id")
             }
         }
         return super.onOptionsItemSelected(item)
@@ -55,6 +53,14 @@ class PopupActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         realm.close()
+    }
+
+    fun delete(id: String) {
+        realm.executeTransaction {
+            val realmData = realm.where(realmData::class.java).equalTo("id", id).findFirst()
+                ?: return@executeTransaction
+            realmData.deleteFromRealm()
+        }
     }
 
 }

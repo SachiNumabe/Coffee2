@@ -10,9 +10,11 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import io.realm.Realm
+import io.realm.annotations.PrimaryKey
 import kotlinx.android.synthetic.main.activity_add.*
 import java.io.FileDescriptor
 import java.io.IOException
+import java.util.*
 
 
 class AddActivity : AppCompatActivity() {
@@ -40,6 +42,13 @@ class AddActivity : AppCompatActivity() {
             intent.type = "image/*"
             startActivityForResult(intent, RESULT_PICK_IMAGEFILE)
 
+        }
+
+        // 変更イベントの実装
+        ratingBarAdd.setOnRatingBarChangeListener { ratingBar, rating, fromUser ->
+//            if(){
+////
+////            }
         }
 
         saveAddButton.setOnClickListener {
@@ -103,6 +112,7 @@ class AddActivity : AppCompatActivity() {
         realm.executeTransaction{
                 //保存するデータの新規作成
                 val newRealmData:realmData = it.createObject(realmData::class.java)
+                //newRealmData.id = UUID.randomUUID().toString()
                 newRealmData.RealmName = realmName
                 newRealmData.RealmFlavor = realmFlavor
                 newRealmData.RealmAcidity = realmAcidity
