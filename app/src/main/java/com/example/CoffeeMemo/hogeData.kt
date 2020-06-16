@@ -1,6 +1,8 @@
 package com.example.CoffeeMemo
 
+import io.realm.annotations.PrimaryKey
 import java.io.Serializable
+import java.util.*
 
 
 data class hogeData (

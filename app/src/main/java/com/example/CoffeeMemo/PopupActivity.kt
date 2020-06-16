@@ -1,27 +1,25 @@
 package com.example.CoffeeMemo
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import coil.api.load
 import io.realm.Realm
-import io.realm.RealmObject.deleteFromRealm
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_popup.*
-import java.io.Serializable
 
 class PopupActivity : AppCompatActivity() {
 
     val realm : Realm = Realm.getDefaultInstance()
-
+    var hogeData: realmData = realmData()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_popup)
         setSupportActionBar(toolbar_add)
 
-        val hogeData: realmData = intent.getSerializableExtra("realmData") as realmData
+        hogeData = intent.getSerializableExtra("realmData") as realmData
 
         imageViewPopup.load(hogeData.RealmImageResorce){
             error(R.drawable.no_image)
@@ -43,9 +41,18 @@ class PopupActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when(item?.itemId) {
             R.id.deleteButton ->{
-                delete(item.itemId.toString())
-                val Intent = Intent(this,MainActivity::class.java)
-                startActivity(Intent)
+                AlertDialog.Builder(this)
+                    .setTitle("全消去")
+                    .setMessage("本当に消去してもいいですか？")
+                    .setPositiveButton(
+                        "はい"
+                    ) { dialog, which -> // OK button pressed
+                        delete(hogeData.id)
+                        val Intent = Intent(this,MainActivity::class.java)
+                        startActivity(Intent)
+                    }
+                    .setNegativeButton("いいえ", null)
+                    .show()
             }
         }
         return super.onOptionsItemSelected(item)
