@@ -42,7 +42,7 @@ class PopupActivity : AppCompatActivity() {
         when(item?.itemId) {
             R.id.deleteButton ->{
                 AlertDialog.Builder(this)
-                    .setTitle("全消去")
+                    .setTitle("メモの消去")
                     .setMessage("本当に消去してもいいですか？")
                     .setPositiveButton(
                         "はい"
